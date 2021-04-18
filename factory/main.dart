@@ -1,4 +1,5 @@
 import 'pizza.dart';
+import 'pizza_factory.dart';
 
 void main() {
   Pizza pizza = orderPizza('cheeze');
@@ -6,17 +7,8 @@ void main() {
 }
 
 Pizza orderPizza(String type) {
-  Pizza pizza;
-  switch (type) {
-    case 'cheeze':
-      pizza = CheezePizza();
-      break;
-    case 'meatball':
-      pizza = MeatBallPizza();
-      break;
-    default:
-      pizza = DefaultPizza();
-  }
+  SimplePizzaFactory pizzaFactory = SimplePizzaFactory();
+  final pizza = pizzaFactory.createPizza(type);
   pizza.bake();
   pizza.cut();
   pizza.box();
