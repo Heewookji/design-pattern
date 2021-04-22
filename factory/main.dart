@@ -2,8 +2,8 @@ import 'pizza.dart';
 import 'pizza_factory.dart';
 
 void main() {
-  Pizza pizza = orderPizza('cheeze');
-  print(pizza.runtimeType); //CheezePizza
+  Pizza pizza = orderPizza('cheese');
+  print(pizza.runtimeType); //CheesePizza
 }
 
 Pizza orderPizza(String type) {
