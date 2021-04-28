@@ -8,6 +8,7 @@ abstract class PizzaStore {
     pizza.box();
     return pizza;
   }
+
   Pizza createPizza(String type);
 }
 
@@ -17,10 +18,10 @@ class NewYorkPizzaStore extends PizzaStore {
     late Pizza pizza;
     switch (type) {
       case 'cheese':
-        pizza = CheesePizza();
+        pizza = NewYorkCheesePizza();
         break;
       case 'meatball':
-        pizza = MeatBallPizza();
+        pizza = NewYorkMeatBallPizza();
         break;
     }
     return pizza;
@@ -33,10 +34,10 @@ class ChicagoPizzaStore extends PizzaStore {
     late Pizza pizza;
     switch (type) {
       case 'cheese':
-        pizza = CheesePizza();
+        pizza = ChicagoCheesePizza();
         break;
       case 'meatball':
-        pizza = MeatBallPizza();
+        pizza = ChicagoMeatBallPizza();
         break;
     }
     return pizza;

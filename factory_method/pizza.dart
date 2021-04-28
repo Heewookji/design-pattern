@@ -2,14 +2,41 @@ abstract class Pizza {
   abstract String name;
   abstract String dough;
   abstract String sauce;
-  void bake();
-  void cut();
-  void box();
+  void bake() {
+    //Do some bake job
+  }
+
+  void cut() {
+    //Do some cut job
+  }
+
+  void box() {
+    //Do some box job
+  }
 }
 
-class CheesePizza implements Pizza {
+class NewYorkCheesePizza extends Pizza {
   @override
-  String name = 'cheese';
+  String name = 'NewYorkCheesePizza';
+  @override
+  String dough = 'thin';
+  @override
+  String sauce = 'marinara';
+
+  @override
+  void cut() {
+    //Do some NewYorkCheesePizza job
+  }
+
+  @override
+  void box() {
+    //Do some NewYorkCheesePizza job
+  }
+}
+
+class ChicagoCheesePizza extends Pizza {
+  @override
+  String name = 'ChicagoCheesePizza';
   @override
   String dough = 'thin';
   @override
@@ -17,35 +44,48 @@ class CheesePizza implements Pizza {
 
   @override
   void bake() {
-    //Do some cheese job
+    //Do some ChicagoCheesePizza job
   }
   @override
   void cut() {
-    //Do some cheese job
-  }
-  @override
-  void box() {
-    //Do some cheese job
+    //Do some ChicagoCheesePizza job
   }
 }
 
-class MeatBallPizza implements Pizza {
+class NewYorkMeatBallPizza extends Pizza {
   @override
-  String name = 'meatball';
+  String name = 'NewYorkMeatBallPizza';
   @override
   String dough = 'thick';
   @override
   String sauce = 'tomato';
   @override
   void bake() {
-    //Do some meatball job
-  }
-  @override
-  void cut() {
-    //Do some meatball job
+    //Do some NewYorkMeatBallPizza job
   }
   @override
   void box() {
-    //Do some meatball job
+    //Do some NewYorkMeatBallPizza job
+  }
+}
+
+class ChicagoMeatBallPizza extends Pizza {
+  @override
+  String name = 'ChicagoMeatBallPizza';
+  @override
+  String dough = 'thick';
+  @override
+  String sauce = 'tomato';
+  @override
+  void bake() {
+    //Do some ChicagoMeatBallPizza job
+  }
+  @override
+  void cut() {
+    //Do some ChicagoMeatBallPizza job
+  }
+  @override
+  void box() {
+    //Do some ChicagoMeatBallPizza job
   }
 }
