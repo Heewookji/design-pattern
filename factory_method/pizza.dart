@@ -2,17 +2,39 @@ abstract class Pizza {
   abstract String name;
   abstract String dough;
   abstract String sauce;
-  void bake() {
-    //Do some bake job
-  }
+  void bake();
+  void cut();
+  void box();
+}
 
-  void cut() {
-    //Do some cut job
-  }
+class CheesePizza extends Pizza {
+  @override
+  String name = 'CheesePizza';
+  @override
+  String dough = 'thin';
+  @override
+  String sauce = 'marinara';
+  @override
+  void bake() => print('CheesePizza bake');
+  @override
+  void cut() => print('CheesePizza cut');
+  @override
+  void box() => print('CheesePizza box');
+}
 
-  void box() {
-    //Do some box job
-  }
+class MeatBallPizza extends Pizza {
+  @override
+  String name = 'MeatBallPizza';
+  @override
+  String dough = 'thin';
+  @override
+  String sauce = 'tomato';
+  @override
+  void bake() => print('MeatBallPizza bake');
+  @override
+  void cut() => print('MeatBallPizza cut');
+  @override
+  void box() => print('MeatBallPizza box');
 }
 
 class NewYorkCheesePizza extends Pizza {
@@ -22,51 +44,42 @@ class NewYorkCheesePizza extends Pizza {
   String dough = 'thin';
   @override
   String sauce = 'marinara';
-
   @override
-  void cut() {
-    //Do some NewYorkCheesePizza job
-  }
-
+  void bake() => print('NewYorkCheesePizza bake');
   @override
-  void box() {
-    //Do some NewYorkCheesePizza job
-  }
-}
-
-class ChicagoCheesePizza extends Pizza {
+  void cut() => print('NewYorkCheesePizza cut');
   @override
-  String name = 'ChicagoCheesePizza';
-  @override
-  String dough = 'thin';
-  @override
-  String sauce = 'marinara';
-
-  @override
-  void bake() {
-    //Do some ChicagoCheesePizza job
-  }
-  @override
-  void cut() {
-    //Do some ChicagoCheesePizza job
-  }
+  void box() => print('NewYorkCheesePizza box');
 }
 
 class NewYorkMeatBallPizza extends Pizza {
   @override
   String name = 'NewYorkMeatBallPizza';
   @override
-  String dough = 'thick';
+  String dough = 'thin';
   @override
   String sauce = 'tomato';
   @override
-  void bake() {
-    //Do some NewYorkMeatBallPizza job
-  }
+  void bake() => print('NewYorkMeatBallPizza bake');
   @override
-  void box() {
-    //Do some NewYorkMeatBallPizza job
-  }
+  void cut() => print('NewYorkMeatBallPizza cut');
+  @override
+  void box() => print('NewYorkMeatBallPizza box');
+}
+
+class ChicagoCheesePizza extends Pizza {
+  @override
+  String name = 'ChicagoCheesePizza';
+  @override
+  String dough = 'thick';
+  @override
+  String sauce = 'marinara';
+  @override
+  void bake() => print('ChicagoCheesePizza bake');
+  @override
+  void cut() => print('ChicagoCheesePizza cut');
+  @override
+  void box() => print('ChicagoCheesePizza box');
 }
 
 class ChicagoMeatBallPizza extends Pizza {
@@ -77,15 +90,9 @@ class ChicagoMeatBallPizza extends Pizza {
   @override
   String sauce = 'tomato';
   @override
-  void bake() {
-    //Do some ChicagoMeatBallPizza job
-  }
+  void bake() => print('ChicagoMeatBallPizza bake');
   @override
-  void cut() {
-    //Do some ChicagoMeatBallPizza job
-  }
+  void cut() => print('ChicagoMeatBallPizza cut');
   @override
-  void box() {
-    //Do some ChicagoMeatBallPizza job
-  }
+  void box() => print('ChicagoMeatBallPizza box');
 }
